@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<title>
-    My blog
-</title>
-<link rel="stylesheet" href="/css/app.css">
-{{-- <script src="/js/app.js"></script> --}}
-<body>
+@extends('layout')
+
+@section('banner')
+    <h1>
+        My blog
+    </h1>
+@endsection
+
+@section('content')
+
     @foreach ($posts as $post) {{--<?php foreach ($posts as $post) : ?>--}}
         {{--@dd($loop)--}} {{-- Nos da acceso a una variable loop con informacón acerca del loop --}}
         <article class="{{ $loop->even ? 'foobar' : '' }}"> {{-- La variable loop puede servir para algo como esto y más --}}
@@ -23,4 +26,5 @@
 
         </article>
     @endforeach {{--<?php endforeach; ?>--}}
-</body>
+
+@endsection

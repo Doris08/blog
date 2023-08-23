@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<title>
-    My blog
-</title>
-<link rel="stylesheet" href="/css/app.css">
-{{-- <script src="/js/app.js"></script> --}}
-<body>
+@extends('layout')
+
+@section('content')
 
     <article>
         <h1>
@@ -19,4 +15,4 @@
 
     <a href="/">Go back</a>
 
-</body>
+@endsection
