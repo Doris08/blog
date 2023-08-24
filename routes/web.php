@@ -81,7 +81,7 @@ Route::get('posts/{post}', function ($slug) {
     // Find a post by its slug an pass it to a view called "post"
 
     return view('post', [
-        'post' => Post::find($slug)
+        'post' => Post::findOrFail($slug)
     ]);
 
     /*if(! file_exists($path = __DIR__ . "/../resources/post/{$slug}.html")){
@@ -96,4 +96,4 @@ Route::get('posts/{post}', function ($slug) {
         'post' => $post
     ]);*/
 
-})->where('post', '[A-z_\-]+');
+});// ->where('post', '[A-z_\-]+') Forma de hacerlo que funciona pero se hará desde el metodo find() de Post
